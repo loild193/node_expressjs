@@ -4,7 +4,7 @@ var app = express();
 var port = 9999;
 
 app.get('/', function(request, response){
-	response.send('Hellu Thach Thao');
+	response.send('<h1>Hellu Thach Thao</h1><a href="/corona">Corona hello</a>');
 });
 
 app.get('/corona', function(request, response){
