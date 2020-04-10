@@ -1,0 +1,7 @@
+h1 Users
+form(action="/corona/search", method="get")
+	input(type="text", name="q", value=q) 
+	button Search
+ul
+	each user in users
+		li= user.name
