@@ -1,0 +1,11 @@
+h1 TodoList
+
+form(action="/add", method="POST")
+  input(type="text", name="name")
+  button Add
+
+ul
+  each item in items
+    li
+      span= item.name
+        a(href="/delete/" + item.id) Delete
