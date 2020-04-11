@@ -1,6 +1,8 @@
 h1 Users
-form(action="/corona/search", method="get")
-	input(type="text", name="q", value=q) 
+a(href="/users/create") Create
+
+form(action="/users/search", method="get")
+	input(type="text", name="q") 
 	button Search
 ul
 	each user in users
