@@ -1,5 +1,26 @@
 html
-	head
-		link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css")
-	body
-		block content
+  head
+    link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css")
+    link(rel="stylesheet", href="/styles/navbar.css")
+  body
+    nav(class="navbar navbar-dark bg-dark")
+      a(href="/", class="navbar-brand") 
+        img(src="/images/logo.png")
+      ul(class="navbar-nav d-flex flex-row justify-content-start")
+        li(class="nav-item")
+          a(href="/", class="nav-link p-4") Home
+        li(class="nav-item")
+          a(href="/users/search", class="nav-link p-4") Search
+        li(class="nav-item")
+          a(href="/users/create", class="nav-link p-4") Create
+      button(class="navbar-toggler", type="button", data-toggle="collapse", data-target="#navbarNavDropdown", aria-controls="navbarNavDropdown", aria-expanded="false", aria-label="Toggle navigation")
+        span(class="navbar-toggler-icon")
+      div(class="collapse navbar-collapse", id="navbarNavDropdown")
+        ul(class="navbar-nav")
+          li(class="nav-item")
+            a(href="/", class="nav-link") Home
+          li(class="nav-item")
+            a(href="/users/search", class="nav-link") Search
+          li(class="nav-item")
+            a(href="/users/create", class="nav-link") Create
+    block content
