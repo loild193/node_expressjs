@@ -1,6 +1,4 @@
 var express = require('express');
-var bodyParser = require('body-parser');
-var shortid = require('shortid');
 
 var low = require('lowdb');
 var FileSync = require('lowdb/adapters/FileSync');
@@ -11,7 +9,7 @@ db = low(adapter);
 db.defaults({ items: [] })
   .write();
 
-// var Routes = require('./routes/user.route');
+var todoRoutes = require('./routes/todo.route');
 
 var port = 9998;
 
@@ -27,18 +25,7 @@ app.get('/', function(req, res){
   });
 });
 
-app.post('/add', function(req, res){
-  req.body.id = shortid.generate();
-  db.get('items').push(req.body).write();
-  res.redirect('/');
-});
-
-app.get('/delete/:id', function(req, res){
-  var id = req.body.id;
-  db.get('items').find({ id: id }).unset('name').write();
-
-  res.redirect('/');
-});
+app.use('/', todoRoutes);
 
 app.listen(port, function(){
   console.log('Server listening on port ' + port);

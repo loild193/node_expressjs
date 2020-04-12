@@ -1,11 +1,19 @@
-h1 TodoList
+extends ./layouts/master
 
-form(action="/add", method="POST")
-  input(type="text", name="name")
-  button Add
+block content
 
-ul
-  each item in items
-    li
-      span= item.name
-        a(href="/delete/" + item.id) Delete
+  h1 TodoList
+
+  form.d-flex(action="/add", method="POST")
+    input.form-control(type="text", name="name")
+    button.btn.btn-success.ml-3 Add
+
+  if errors
+    each error in errors
+      .alert.alert-danger= error
+
+  ul.list-group
+    each item in items
+      li.list-group-item.list-group-item-action.pt-3
+        span= item.name
+        a.btn.btn-secondary.float-right(href="/delete/" + item.id) Delete
