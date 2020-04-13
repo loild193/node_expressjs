@@ -19,7 +19,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 app.use(express.static('public'));
-app.use(cookieParser());
+app.use(cookieParser('sdgafhklsdjhfalksjhfl'));
 
 app.get('/', function(req, res){
 	res.render('index', {
