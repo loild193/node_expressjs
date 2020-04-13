@@ -1,52 +1,11 @@
 {
   "users": [
     {
-      "name": "Halui",
-      "id": "jYkj7P1xA"
-    },
-    {
-      "name": "Le Loi",
-      "id": "fEoD58LuP"
-    },
-    {
-      "name": "Thach Thao",
-      "id": "zqMn1O4NT"
-    },
-    {
-      "name": "Duo\\",
-      "id": "Z0NoNi3Z8"
-    },
-    {
-      "name": "Duoc Cua No",
-      "id": "ulBPH9NBJ"
-    },
-    {
-      "name": "Duoc Cua No",
-      "id": "rH-Sm0m0A"
-    },
-    {
-      "name": "lulu",
-      "id": "s389qD9Le"
-    },
-    {
-      "name": "132",
-      "id": "Cwokyki1i"
-    },
-    {
-      "name": "fff",
-      "id": "yek8tQQtj"
-    },
-    {
-      "name": [
-        "Le Duc Loi",
-        "0986093341"
-      ],
-      "id": "SDaPYDnJI"
-    },
-    {
       "name": "Le Duc Loi",
       "phone": "0986093341",
-      "id": "PkHStqNlU"
+      "id": "PkHStqNlU",
+      "email": "dekaito193@gmail.com",
+      "password": "1"
     },
     {
       "name": "Thao Thach",

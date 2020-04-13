@@ -1,0 +1,15 @@
+extends ../layouts/common
+
+block content
+  h1 Login
+
+  if errors
+    each error in errors
+      .alert.alert-warning= error
+
+  form(action="/auth/login", method="POST")
+    label(for="email") Email
+    input#email(type="text", name="email", value= values ? values.email : "").form-control.mb-3
+    label(for="password") Password
+    input#password(type="password", name="password").form-control.mb-3
+    button.btn.btn-primary Login
