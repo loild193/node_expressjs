@@ -10,6 +10,7 @@ var productRoutes = require('./routes/product.route');
 var cartRoutes = require('./routes/cart.route');
 
 var authMiddleware = require('./middlewares/auth.middleware');
+var sessionMiddleware = require('./middlewares/session.middleware');
 
 var port = 9999;
 
@@ -23,7 +24,9 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 app.use(express.static('public'));
-app.use(cookieParser('sdgafhklsdjhfalksjhfl'));
+app.use(cookieParser(process.env.SESSION_SECRET));
+
+app.use(sessionMiddleware);
 
 app.get('/', function(req, res){
 	res.render('index', {

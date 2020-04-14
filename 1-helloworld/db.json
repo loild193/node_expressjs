@@ -726,5 +726,26 @@
       "description": "urna pretium nisl ut volutpat sapien arcu sed augue aliquam erat volutpat in congue etiam justo etiam pretium iaculis justo",
       "price": "879"
     }
+  ],
+  "session": [
+    {
+      "id": "wOJ_xolwZ",
+      "cart": {
+        "bae1c6f8-42cc-428e-8f18-dbce6fca2dba": 5
+      }
+    },
+    {
+      "id": "d9ABHtDoX",
+      "cart": {
+        "bae1c6f8-42cc-428e-8f18-dbce6fca2dba": 4,
+        "238db020-b697-4286-b49c-261b8058c425": 1
+      }
+    },
+    {
+      "id": "t7WHLBjWe",
+      "cart": {
+        "bae1c6f8-42cc-428e-8f18-dbce6fca2dba": 1
+      }
+    }
   ]
 }
