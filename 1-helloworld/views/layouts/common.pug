@@ -11,11 +11,13 @@ html
       #navbarNav.collapse.navbar-collapse
         ul.navbar-nav
           li.nav-item
-            a.nav-link(href='/') Home
+            a.text-light.nav-link(href='/') Home
           li.nav-item
-            a.nav-link(href='/users/search') Search
+            a.text-light.nav-link(href='/users/search') Search
           li.nav-item
-            a.nav-link(href='/users/create') Create
+            a.text-light.nav-link(href='/users/create') Create
+          li.nav-item
+            a.text-light.nav-link(href='/cart') Cart
       if user
         p.text-light= user.name
     .container.pt-5
