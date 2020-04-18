@@ -14,6 +14,8 @@ var productRoutes = require('./routes/product.route');
 var cartRoutes = require('./routes/cart.route');
 var transferRoutes = require('./routes/transfer.route');
 
+var apiProductRoutes = require('./api/routes/product.route');
+
 var authMiddleware = require('./middlewares/auth.middleware');
 var sessionMiddleware = require('./middlewares/session.middleware');
 
@@ -28,9 +30,11 @@ app.use(bodyParser.urlencoded({ extended: false }))
 // parse application/json
 app.use(bodyParser.json())
 
+app.use('/api/products', apiProductRoutes);
+
 app.use(express.static('public'));
 app.use(cookieParser(process.env.SESSION_SECRET));
-app.use(csurf({ cookie: true }));
+// app.use(csurf({ cookie: true }));
 
 app.use(sessionMiddleware);
 
