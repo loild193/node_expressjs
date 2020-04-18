@@ -1,5 +1,6 @@
-var db = require('../db');
+var Transfer = require('../models/transfer.model');
 var shortid = require('shortid');
+var db = require('../db');
 
 module.exports.create = function(req, res, next) {
   res.render('transfer/create', {
@@ -8,13 +9,13 @@ module.exports.create = function(req, res, next) {
 }
 
 module.exports.postCreate = function(req, res, next) {
-  var data = {
-    id: shortid.generate(),
+  var data = new Transfer({
     amount: parseInt(req.body.amount),
     accountId: req.body.accountId,
     userId: req.signedCookies.userId
-  };
+  });
 
-  db.get('transfer').push(data).write();
+  data.save();
+  // db.get('transfer').push(data).write();
   res.redirect('/transfer/create');
 }

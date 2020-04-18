@@ -8,6 +8,7 @@ block content
       .alert.alert-warning= error
 
   form(action="/users/create", method="POST", enctype="multipart/form-data")
+    input(type="hidden", name="_csrf", value=csrfToken)
     .form-group
     label(for="name") Name
     input#name(type="text", name="name", value= values ? values.name : "").form-control.mb-3
@@ -19,4 +20,5 @@ block content
     .form-group
     label(for="avatar") Avatar
     input#avatar(type="file", name="avatar").form-control-file.mb-3
+    
     button.btn.btn-primary Create
